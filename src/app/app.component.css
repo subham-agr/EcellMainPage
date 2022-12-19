@@ -1,0 +1,108 @@
+.text{
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 90px;
+}
+
+.main-body{
+    height: 100vh;
+    background-color: #161616;
+}
+.other-body{
+    min-height: 100vh;
+    padding: 5rem;
+}
+
+.body-text{
+    width: 50vw;
+    justify-content: center;
+    height: 80vh;
+    padding: 5rem;
+}
+
+.images{
+    width: 50vw;
+    height: 80vh;
+    padding: 2rem;
+}
+
+.image-sec{
+    background: white;
+    width: 30vw;
+    height: 50vh;
+    margin-bottom: 3rem;
+}
+
+.divison{
+    /* display: inline-block; */
+    /* width: 100vw; */
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+
+.btn-scroll{
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.btn-scroll:hover{
+    background: white;
+    color: black;
+}
+
+.button{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.Ecellheading{
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 65px;
+    color: #252525;
+}
+
+.content{
+    box-sizing: border-box;
+    width: 799px;
+    height: 319px;
+    background: #252525;
+    border: 1px solid #252525;
+    border-radius: 31px;
+    padding: 3rem;
+    margin: 2rem;
+}
+
+.example-card {
+    max-width: 350px;
+    /* margin-bottom: 2rem; */
+  }
+
+.gallery{
+    height: 100vh;
+    background-color: #161616;
+    padding: 2rem;
+}
+
+.contactus{
+    height: 50vh;
+    /* background-color: #161616; */
+    padding: 2rem;
+}
+
+.galleryhead{
+    font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 54px;
+line-height: 65px;
+/* color: white; */
+}

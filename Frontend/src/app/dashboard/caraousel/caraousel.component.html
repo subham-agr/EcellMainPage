@@ -1,0 +1,14 @@
+<p-carousel class="caraousel" [value]="images" [autoplayInterval]="3000" [circular]="true" styleClass="custom-carousel" [numVisible]="3"
+  [numScroll]="1" [showIndicators]="false"  [showNavigators]="false" [responsiveOptions]="responsiveOptions">
+  
+  <ng-template class="content" let-image pTemplate="item">
+    <div class="item card-details">
+      <img src="{{image.picture}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-secondary">Know more</a>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

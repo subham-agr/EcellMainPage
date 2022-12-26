@@ -1,0 +1,66 @@
+.content-container{
+    padding: 2vw 3vw 5vw 6vw;
+    display: flex;
+    width: 100%;
+    background: #161616;
+}
+.content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1vw;
+}
+.content h1{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 5vw;
+}
+.content p{
+    color: white;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 3.1vw 0 0;
+}
+.content .buttons{
+    display: flex;
+    gap: 2vw;
+}
+.content .buttons button:nth-child(1){
+    text-transform: capitalize;
+    border-radius: 2vw;
+    // background-color: white;
+    padding: 0 3vw;
+}
+.content .buttons button:nth-child(2){
+    text-transform: capitalize;
+    border-radius: 2vw;
+    // background-color: white;
+}
+.image{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.image .img{
+    background: url('../../assets/images/header-img.png');
+    width: 38vw;
+    height: 36vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.image .img img{
+    width: 80%;
+    height: 80%;
+    margin-left: 1.2vw;
+    margin-top: 1.2vw;
+}

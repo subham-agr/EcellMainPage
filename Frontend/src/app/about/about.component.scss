@@ -1,0 +1,132 @@
+.content-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 4vw;
+    background-color: #161616;
+}
+
+// origins start
+.content-container .origins{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.content-container .content-img{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-container .content-img .img-container{
+    width: 90%;
+    height: 25vw;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 2px solid gray;
+}
+.content-container .content-img .img-container .img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    margin: 8px 0 0 8px;
+    background: url('../../assets/images/abotu-img.png');
+    background-position: center;
+    background-size: cover;
+}
+.content-container .content-img .img-container .img img{
+    width: 100%;
+    height: 100%;
+}
+.content-container .content{
+    width: 40%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    font-family: 'Bebas Neue', cursive;
+}
+// origins end
+
+// vision start
+.content-container .vision{
+    padding: 3vw 0;
+    display: flex;
+    justify-content: center;
+}
+
+.content-container .vision .vision-container{
+    width: 90%;
+    height: 25vw;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 2px solid gray;
+}
+.content-container .vision .content{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    margin: 8px 0 0 8px;
+    padding: 2.2vw 1.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.content-container .vision .content h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3vw;
+}
+
+// vision end
+
+// recognition start
+.recognition{
+    display: flex;
+    flex-direction: column;
+}
+.recognition h1{
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+.recognition .rec-content{
+    width: 100%;
+    // background-color: white;
+    height: 20vw;
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+    align-items: center;
+}
+.recognition .rec-content .container-card{
+    // background-color: white;
+    width: 18vw;
+    height: 18vw;
+    background-color: transparent;
+    border: 2px solid grey;
+    border-radius: 10px;
+
+}
+.recognition .rec-content .container-card .item{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    margin: 8px 0 0 8px;
+    padding: 2.2vw 1.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recognition .rec-content .container-card .item img{
+    width: 95%;
+}
+// recognition end

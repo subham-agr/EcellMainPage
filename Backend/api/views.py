@@ -36,3 +36,58 @@ def initiative(request):
             data = OrderedDict([('id',initiative.initiative_id),('name',initiative.initiative_name),('text',initiative.introtext),('image_link',img_path)])
             data_list.append(data)
         return JsonResponse(data_list,safe=False)
+
+@api_view(['GET'])
+def gallery(request):
+    if request.method == 'GET':
+        gallery_images = Gallery.objects.all()
+        data_list = []
+        for gallery_image in gallery_images:
+            img_path = request.build_absolute_uri(settings.MEDIA_URL) + str(gallery_image.image)
+            data = OrderedDict([('sequence',gallery_image.sequence),('name',gallery_image.image_name),('image_link',img_path)])
+            data_list.append(data)
+        return JsonResponse(data_list,safe=False)
+
+@api_view(['GET'])
+def homeimages(request):
+    if request.method == 'GET':
+        homecoverimages = HomeCoverImage.objects.all()
+        data_list = []
+        for homecoverimage in homecoverimages:
+            img_path = request.build_absolute_uri(settings.MEDIA_URL) + str(homecoverimage.image)
+            data = OrderedDict([('sequence',homecoverimage.sequence),('name',homecoverimage.image_name),('image_link',img_path)])
+            data_list.append(data)
+        return JsonResponse(data_list,safe=False)
+
+@api_view(['GET'])
+def team(request):
+    if request.method == 'GET':
+        members = Team.objects.all()
+        data_list = []
+        for member in members:
+            img_path = request.build_absolute_uri(settings.MEDIA_URL) + str(member.image)
+            data = OrderedDict([('member_name',member.name),('designation',member.designation),('image_link',img_path),('email',member.email),('linkedin',member.linkedin),('facebook',member.facebook),('instagram',member.instagram),('whatsapp',member.whatsapp)])
+            data_list.append(data)
+        return JsonResponse(data_list,safe=False)
+
+@api_view(['GET'])
+def patronages(request):
+    if request.method == 'GET':
+        patronages = Patronages.objects.all()
+        data_list = []
+        for patronage in patronages:
+            img_path = request.build_absolute_uri(settings.MEDIA_URL) + str(patronage.image)
+            data = OrderedDict([('sequence',patronage.sequence),('name',patronage.image_name),('image_link',img_path)])
+            data_list.append(data)
+        return JsonResponse(data_list,safe=False)
+
+@api_view(['GET'])
+def vision(request):
+    if request.method == 'GET':
+        about_vision = Vision.objects.all()
+        data_list = []
+        for about_vision1 in about_vision:
+            img_path = request.build_absolute_uri(settings.MEDIA_URL) + str(about_vision1.vision_image)
+            data = OrderedDict([('vision',about_vision1.vision),('vision_image',img_path)])
+            data_list.append(data)
+        return JsonResponse(data_list,safe=False)

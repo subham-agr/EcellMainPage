@@ -35,6 +35,7 @@ import { FooterComponent } from './dashboard/footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ContactComponent } from './contact/contact.component';
+import { GalleryComponent } from './dashboard/gallery/gallery.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     BlogsComponent,
     ContactComponent,
+    GalleryComponent,
     
   ],
   imports: [
@@ -74,7 +76,7 @@ import { ContactComponent } from './contact/contact.component';
     ToastModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path: '', component: DashboardComponent},
+      // {path: '', component: DashboardComponent},
       {path: 'home', component: DashboardComponent},
       {path: 'about', component: AboutComponent},
       {path: 'blogs', component: BlogsComponent},

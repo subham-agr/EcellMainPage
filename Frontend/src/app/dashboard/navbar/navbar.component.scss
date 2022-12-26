@@ -10,7 +10,25 @@
     height: 3.5vw;
 }
 .active{
-    font-size: 2vw;
+    font-size: 1.5vw;
+    width: 5rem;
+}
+
+.nav-item{
+    margin: 0 1.5rem;
+}
+
+.active-link{
+    width: 5rem;
+    text-align: center;
+    // padding: 0.2rem 0;
+    background-color: white;
+    color: black !important;
+    border-radius: 4px;
+}
+
+.font-size{
+    font-size: 1.5vw;
 }
 
 // .bi{

@@ -25,3 +25,14 @@ def home(request):
             data = OrderedDict([('about_text',home_data1.about),('about_picture',img_path)])
             data_list.append(data)
         return JsonResponse(data_list,safe=False)
+
+@api_view(['GET'])
+def initiative(request):
+    if request.method == 'GET':
+        initatives = Initiatives.objects.all()
+        data_list = []
+        for initiative in initatives:
+            img_path = request.build_absolute_uri(settings.MEDIA_URL) + str(initiative.coverimage)
+            data = OrderedDict([('id',initiative.initiative_id),('name',initiative.initiative_name),('text',initiative.introtext),('image_link',img_path)])
+            data_list.append(data)
+        return JsonResponse(data_list,safe=False)

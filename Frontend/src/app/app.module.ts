@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http'
 
 // MDB Modules
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
@@ -71,6 +72,7 @@ import { ContactComponent } from './contact/contact.component';
     CarouselModule,
     ButtonModule,
     ToastModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: '', component: DashboardComponent},
       {path: 'home', component: DashboardComponent},

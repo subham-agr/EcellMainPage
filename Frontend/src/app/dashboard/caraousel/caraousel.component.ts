@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-caraousel',
@@ -9,7 +10,10 @@ export class CaraouselComponent implements OnInit {
   images:any; 
   responsiveOptions:any;
 
-  constructor() { 
+  li:any;
+  lis:[];
+
+  constructor(private http: HttpClient) { 
     this.responsiveOptions = [
       {
           breakpoint: '1024px',
@@ -30,6 +34,10 @@ export class CaraouselComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.http.get('http://localhost:8000/initiatives').subscribe(Response => {
+      this.li = Response;
+      console.log(Response)
+    })
     this.images = [
       {random: 'Random', picture: 'https://picsum.photos/id/944/900/500'},
       {random: 'Samoa', picture: 'https://picsum.photos/id/1011/900/500'},

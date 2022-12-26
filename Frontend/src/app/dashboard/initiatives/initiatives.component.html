@@ -1,15 +1,16 @@
 <div class="content-container">
-    <div class="content">
+    <div *ngFor="let e of li;" class="content">
         <div class="details">
             <h1>what is e-cell iit bombay?</h1>
             <div class="card-details">
                 <div class="item">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil doloremque, esse tempore minus voluptatibus nemo quia. Ad, in distinctio! Laudantium ab blanditiis tempore fugiat veritatis quae! Dolorem laboriosam voluptatibus consequatur vel dolore rem non inventore perspiciatis nam expedita amet omnis pariatur, totam accusantium saepe dignissimos sit odio nostrum modi molestias.
+                    {{e.about_text}}
                 </div>
             </div>
         </div>
         <div class="card-container">
-            <img src="assets/images/init-card.png" alt="">
+            <!-- <img src="assets/images/init-card.png" alt=""> -->
+            <img src={{e.about_picture}} alt="">
         </div>
     </div>
     <div class="caraousel">

@@ -1,6 +1,18 @@
 from django.db import models
 
 # Create your models here.
+HEADING_CHOICES =(
+    ("For Competition and Mentoring Related Queries","For Competition and Mentoring Related Queries"),
+    ("For Sponsorship Queries","For Sponsorship Queries"),
+    ("For Portal and Media Queries","For Portal and Media Queries"),
+)
+
+class HeadingTeam(models.Model):
+    heading = models.CharField(max_length=300, choices=HEADING_CHOICES, default= '1',blank=True)
+
+    def __str__(self):
+        return self.heading
+
 class Home(models.Model):
     about = models.CharField(max_length=3000,blank=True)
     about_image = models.ImageField(blank=True)
@@ -43,6 +55,7 @@ class Vision(models.Model):
     vision_image = models.ImageField(blank=True)
 
 class Team(models.Model):
+    heading = models.ForeignKey(HeadingTeam, on_delete=models.CASCADE,blank=True, default=True)
     name = models.CharField(max_length=300, blank=True)
     designation = models.CharField(max_length=300, blank=True)
     image = models.ImageField(blank=True)

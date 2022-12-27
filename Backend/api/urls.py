@@ -11,4 +11,5 @@ urlpatterns = [
     path("patronages",views.patronages),
     path("vision",views.vision),
     path("team",views.team),
+    path("query",views.queries),
 ]

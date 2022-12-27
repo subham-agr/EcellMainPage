@@ -76,10 +76,11 @@ import { GalleryComponent } from './dashboard/gallery/gallery.component';
     ToastModule,
     HttpClientModule,
     RouterModule.forRoot([
-      // {path: '', component: DashboardComponent},
+      // {path: '**', component: DashboardComponent},
+      {path: '', redirectTo: '/home', pathMatch: 'full' },
       {path: 'home', component: DashboardComponent},
       {path: 'about', component: AboutComponent},
-      {path: 'blogs', component: BlogsComponent},
+      // {path: 'blogs', component: BlogsComponent},
       {path: 'contact', component: ContactComponent},
     ])
   ],

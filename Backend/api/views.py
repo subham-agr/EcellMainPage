@@ -91,3 +91,9 @@ def vision(request):
             data = OrderedDict([('vision',about_vision1.vision),('vision_image',img_path)])
             data_list.append(data)
         return JsonResponse(data_list,safe=False)
+
+@api_view(['POST'])
+def queries(request):
+    if request.method == 'POST':
+        reqData = request.data
+        return JsonResponse(safe=False)

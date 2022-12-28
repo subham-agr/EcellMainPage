@@ -4,12 +4,12 @@
         
         <p-carousel class="caraousel"  [value]="li" [autoplayInterval]="3000" [circular]="true" styleClass="custom-carousel" [numVisible]="1"
         [numScroll]="1" [showIndicators]="false"  [showNavigators]="true" [responsiveOptions]="responsiveOptions">
-        
         <ng-template class="content" let-image pTemplate="item">
           <div class="item card-details">
             <div class="image-container">
                 <div class="container1 width">
-                    <img src="../../../assets/images/demo-img1.png" alt="">
+                    <!-- <img src="../../../assets/images/demo-img1.png" alt=""> -->
+                    <img src={{image.image_link}} alt={{image.name}}>
                     <img src="../../../assets/images/demo-img1.png" alt="">
                 </div>
                 <div class="container2 width">

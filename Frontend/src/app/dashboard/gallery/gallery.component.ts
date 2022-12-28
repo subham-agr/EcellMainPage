@@ -19,7 +19,7 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get('http://localhost:8000/initiatives').subscribe(Response => {
+    this.http.get('http://localhost:8000/gallery').subscribe(Response => {
       this.li = Response;
       console.log(Response)
     })

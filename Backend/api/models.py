@@ -2,9 +2,14 @@ from django.db import models
 
 # Create your models here.
 HEADING_CHOICES =(
-    ("For Competition and Mentoring Related Queries","For Competition and Mentoring Related Queries"),
-    ("For Sponsorship Queries","For Sponsorship Queries"),
-    ("For Portal and Media Queries","For Portal and Media Queries"),
+    ("Events & PR Head","Events & PR Head"),
+    ("Marketing Head","Marketing Head"),
+    ("Design Head","Design Head"),
+    ("Technical & Web Head","Technical & Web Head"),
+    ("Corporate Relations Head","Corporate Relations Head"),
+    ("Media Head","Media Head"),
+    ("Operations Head","Operations Head"),
+    ("Overall Coordinator","Overall Coordinator"),
 )
 
 class HeadingTeam(models.Model):

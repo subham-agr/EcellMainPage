@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  scrollToBottom() {
+    window.scrollTo(0, document.body.scrollHeight);
+  }
 
   ngOnInit(): void {
   }

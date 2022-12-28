@@ -1,15 +1,18 @@
+<div class="content">
+  <h1>OUR INITIATIVES</h1>
+  <div class="content-container">
 <p-carousel class="caraousel" [value]="li" [autoplayInterval]="3000" [circular]="true" styleClass="custom-carousel" [numVisible]="3"
-  [numScroll]="1" [showIndicators]="false"  [showNavigators]="false" [responsiveOptions]="responsiveOptions">
-  
+  [numScroll]="1" [showIndicators]="false"  [showNavigators]="true"   [responsiveOptions]="responsiveOptions">
   <ng-template class="content" let-image pTemplate="item">
     <div class="item card card-details">
       <div class="image-container"><img src="{{image.image_link}}" class="card-img-top" alt="..."></div>
       <div class="card-body">
-        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p> -->
+   
           <p class="card-text">{{image.text}}</p>
         <a href="#" class="btn btn-outline-secondary">Know more</a>
       </div>
     </div>
   </ng-template>
 </p-carousel>
+</div>
+</div>

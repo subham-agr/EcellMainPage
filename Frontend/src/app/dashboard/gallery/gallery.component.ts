@@ -8,20 +8,28 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  images:any; 
+  responsiveOptions:any;
+
   li:any;
-  lis=[];
+  lis:[];
 
-  ngOnInit(): void {
-    const headers = { Authorization: "Token " + localStorage.getItem("authToken") }
-    this.http.get('https://api3.ecell.in/eureka22/getFaq/')
-    .subscribe(Response => {
-      console.log(Response)
-      this.li=Response;
-      this.lis=this.li.faq;
-      console.log(this.lis)
-    });
-
+  constructor(private http: HttpClient) { 
+    
   }
 
+  ngOnInit(): void {
+    this.http.get('http://localhost:8000/initiatives').subscribe(Response => {
+      this.li = Response;
+      console.log(Response)
+    })
+    this.images = [
+      {random: 'Random', picture: 'https://picsum.photos/id/944/900/500'},
+      {random: 'Samoa', picture: 'https://picsum.photos/id/1011/900/500'},
+      {random: 'Tonga', picture: 'https://picsum.photos/id/984/900/500'},
+      {random: 'Cook Island', picture: 'https://picsum.photos/id/944/900/500'},
+      {random: 'Niue', picture: 'https://picsum.photos/id/1011/900/500'},
+      {random: 'American Samoa', picture: 'https://picsum.photos/id/984/900/500'}
+  ];
+  }
 }

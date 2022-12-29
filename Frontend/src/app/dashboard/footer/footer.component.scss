@@ -96,20 +96,24 @@
     display: flex;
     width: 100%;
     position: relative;
-    bottom: 0;
+    height: fit-content;
+    // bottom: 0;
     justify-content: center;
     align-items: flex-end;
+    overflow-y: hidden;
     // background-color: white;
-    margin: 4vw 0 0 0;
-    padding: 0;
+    // margin: 4vw 0 0 0;
+    // padding: 0;
 }
 .special p{
     // position: absolute;
     // bottom: 0;
     // margin: 0 0 -1vw 0;
-    padding: 0;
+    // padding: 0;
+    margin: 0px !important;
     font-family: 'Bebas Neue';
     font-size: 12vw;
-    line-height: 9vw;
-    margin: 0;
+    transform: translateY(7vh);
+    // line-height: 9vw;
+    // margin: 0;
 }
